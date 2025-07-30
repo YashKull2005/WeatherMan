@@ -1,12 +1,12 @@
-# React + Vite
+Weather Application
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Overview
 
-Currently, two official plugins are available:
+This project is a beginner-friendly weather application built using HTML, CSS, and JavaScript. It dynamically fetches live weather data from the OpenWeatherMap API, allowing users to search for current conditions in any city. Upon entering a city name, the app displays real-time temperature, humidity, wind speed, and an illustrative weather icon that adapts to various conditions such as clear skies, rain, snow, or mist. With a clean UI, responsive layout, and intuitive search functionality, this app is a great starting point for exploring API integration and interactive web design. Error handling ensures smooth user experience, while modular JavaScript functions keep the logic organized. Ideal for those learning front-end development, DOM manipulation, and asynchronous data fetching.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+Features
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+🔍 City Search: Enter any city name to get instant weather details.
+🌡️ Live Temperature: Displays current temperature in Celsius.
+💧 Humidity & Wind Speed: Provides accurate humidity percentage and wind velocity.
+🌤️ Dynamic Icons: Weather conditions are visually represented with intuitive icons (e.g., clear sky, rain, mist).
