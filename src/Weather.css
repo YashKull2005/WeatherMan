@@ -1,0 +1,155 @@
+h1{
+    font-size: 35px;
+    text-align: center;
+    color: black;
+}
+
+body {
+  background-image: url(background.jpeg);
+  background-size: cover;
+  background-position: 10%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Ensure body takes full height */
+  margin: 0;
+}
+
+.container{
+width: 80%;
+max-width: 500px;
+margin: auto;
+padding: 20px;
+border-radius: 30px;
+}
+
+.temp{
+    font-size: 80px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(10, 10, 10);
+    margin-top: 0px;
+    margin-bottom: 2px;
+    
+}
+.city{
+     font-size: 50px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(22, 22, 22);
+    margin-top: 2px;
+    
+}
+.humidity{
+    font-size: 15px;
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    color: rgb(13, 13, 13);
+    margin-top: 2px;
+    display: inline-block;
+}
+.humidity-value,.wind-value{
+    font-size: 25px;
+}
+.humidity-wind{
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    text-align: center;
+}
+  
+.image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%; 
+  margin-bottom: 0px;
+}
+.humidity-image{
+ height: 38px;
+ margin-right:6px ;
+}
+
+@media (max-width: 600px) {
+  .temp {
+    font-size: 50px;
+  }
+
+  .city {
+    font-size: 30px;
+  }
+
+  .humidity-value {
+    font-size: 18px;
+  }
+
+  .humidity-image {
+    height: 30px;
+  }
+
+  .search-bar {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .search {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-button {
+    width: 100%;
+  }
+}
+.search-bar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  width: 90%;
+  max-width: 400px;
+  margin: 20px auto;
+}
+input{
+    color: black;
+}
+
+.search {
+  flex: 1;
+  padding: 10px 15px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 30px;
+  outline: none;
+  background-color: #fff;
+}
+
+.search::placeholder {
+  color: #aaa;
+}
+
+.search-button {
+  padding: 10px 15px;
+  background-color: #3498db;
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 16px;
+  white-space: nowrap;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Search icon inside button */
+.search-button::before {
+  content: "";
+}
+.weather-box {
+  background-size: cover;
+  background-position: center;
+  transition: background-image 0.5s ease;
+}
+
+  
