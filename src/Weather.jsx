@@ -4,6 +4,7 @@ import './Weather.css';
 function Weather() {
   const [city, setCity] = useState('Delhi');
   const [weatherData, setWeatherData] = useState(null);
+  const [dateTime, setDateTime] = useState(new Date());
 
   const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
@@ -32,6 +33,14 @@ function Weather() {
   useEffect(() => {
     fetchWeather(city);
   }, []);
+  useEffect(() => {
+  const interval = setInterval(() => {
+    setDateTime(new Date());
+  }, 1000); // update every second
+
+  return () => clearInterval(interval); // cleanup
+}, []);
+
 
   const getImage = () => {
     const condition = weatherData?.weather?.[0]?.main.toLowerCase();
@@ -49,6 +58,10 @@ function Weather() {
     
     <div className="container">
         <h1>Weather Forecast</h1>
+        <p style={{ textAlign: 'center', fontSize: '18px', marginTop: '-10px', color:"black" }}>
+  {dateTime.toLocaleString()}
+</p>
+
       <div className="search-bar">
         <input
           type="text"
@@ -57,6 +70,7 @@ function Weather() {
           className="search"
           value={city}
           onChange={(e) => setCity(e.target.value)}
+          onKeyDown={(e) => e.key === 'Enter' && fetchWeather(city)}
         />
         <button className="search-button" onClick={() => fetchWeather(city)}>🔍</button>
       </div>
