@@ -7,6 +7,9 @@ This project is a beginner-friendly weather application built using HTML, CSS, a
 Features
 
 🔍 City Search: Enter any city name to get instant weather details.
+
 🌡️ Live Temperature: Displays current temperature in Celsius.
+
 💧 Humidity & Wind Speed: Provides accurate humidity percentage and wind velocity.
+
 🌤️ Dynamic Icons: Weather conditions are visually represented with intuitive icons (e.g., clear sky, rain, mist).
