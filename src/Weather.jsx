@@ -1,13 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import './Weather.css';
 
-function Weather() {
-  const [city, setCity] = useState('Delhi');
+function Weather({city,setCity}) {
   const [weatherData, setWeatherData] = useState(null);
   const [dateTime, setDateTime] = useState(new Date());
 
-  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
 
+  const apiKey = import.meta.env.VITE_WEATHER_API_KEY;
+  
 
   const fetchWeather = async (cityName) => {
     try {
@@ -28,6 +28,7 @@ function Weather() {
     
   };
   
+  
 
 
   useEffect(() => {
@@ -40,7 +41,6 @@ function Weather() {
 
   return () => clearInterval(interval); // cleanup
 }, []);
-
 
   const getImage = () => {
     const condition = weatherData?.weather?.[0]?.main.toLowerCase();
@@ -104,6 +104,7 @@ function Weather() {
           </div>
         </>
       )}
+      
     </div>
   );
 }
