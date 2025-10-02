@@ -54,6 +54,6 @@ function Chart({x,y1,y2}){
     },
   },
   };
-  return <Line data={data} options={options} />;
+  return <div className="chart"><Line data={data} options={options}  />;</div>
 };
 export default Chart;

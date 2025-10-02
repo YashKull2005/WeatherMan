@@ -125,7 +125,7 @@ function Dashboard({city}) {
         )}
       </div>
       <Sunrise t1={sunrise} t2={sunset}/>
-      <Chart x={x} y1={y1} y2={y2}/>
+      <Chart x={x} y1={y1} y2={y2} />
     </div>
   );
 }
