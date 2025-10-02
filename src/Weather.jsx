@@ -72,7 +72,7 @@ function Weather({city,setCity}) {
           onChange={(e) => setCity(e.target.value)}
           onKeyDown={(e) => e.key === 'Enter' && fetchWeather(city)}
         />
-        <button className="search-button" onClick={() => fetchWeather(city)}>🔍</button>
+        <button className="search-button" onClick={() => fetchWeather(city)}><img src='search.png'/></button>
       </div>
 
       {weatherData && (
